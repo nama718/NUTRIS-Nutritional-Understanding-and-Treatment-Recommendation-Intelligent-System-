@@ -37,7 +37,7 @@ safe_append([H|T], L, [H|R]) :-
     safe_append(T, L, R).
 
 % Age categories
-child_under_6months(Age) :- Age =< 6, !.
+child_under_6months(Age) :- Age =< 12, !.
 child_6months_to_2years(Age) :- Age > 6, Age =< 24, !.
 child_2_to_15years(Age) :- Age > 24, Age =< 180, !.
 adult(Age) :- Age > 180, Age =< 1200, !.
@@ -363,9 +363,77 @@ print_item(meal_plan_parameters(M)) :- write('Meal Plan Parameters: '), write(M)
 print_item(justification(J)) :- write('Justification: '), write(J).
 print_item(Other) :- write(Other).
 
-test1 :-
-    safe_assess(4, 5, 0.6, yes, limited, inadequate, poor, Assessment),
+% Test cases covering different age groups and conditions
+test_cases :-
+    write('\n=== Infant Tests (0-6 months) ===\n'),
+    % Severe malnutrition with inadequate breastfeeding
+    test_case(1, 4, 3, 0.6, yes, limited, inadequate, poor),
+    % Normal infant with adequate breastfeeding
+    test_case(2, 3, 6, 0.6, no, diverse, adequate, good),
+    
+    write('\n=== Toddler Tests (6-24 months) ===\n'),
+    % Moderate malnutrition with mixed feeding
+    test_case(3, 8, 7, 0.7, yes, limited, inadequate, poor),
+    % Mild malnutrition with good care
+    test_case(4, 18, 9, 0.8, no, diverse, adequate, good),
+    
+    write('\n=== Young Child Tests (2-5 years) ===\n'),
+    % Severe malnutrition with poor conditions
+    test_case(5, 36, 10, 0.9, yes, limited, inadequate, poor),
+    % Normal growth with good conditions
+    test_case(6, 48, 15, 1.0, no, diverse, adequate, good),
+    
+    write('\n=== School Age Tests (5-15 years) ===\n'),
+    % Moderate malnutrition with illness
+    test_case(7, 84, 20, 1.2, yes, limited, adequate, poor),
+    % Mild malnutrition with good diet
+    test_case(8, 120, 25, 1.4, no, diverse, adequate, good).
+
+% Helper predicate to run individual test cases
+test_case(N, Age, Weight, Height, Illness, Diet, Breastfeeding, Sanitation) :-
+    format('\nTest Case ~w:\n', [N]),
+    format('Age: ~w months, Weight: ~w kg, Height: ~w m\n', [Age, Weight, Height]),
+    format('Conditions: Illness: ~w, Diet: ~w, Breastfeeding: ~w, Sanitation: ~w\n', 
+           [Illness, Diet, Breastfeeding, Sanitation]),
+    (safe_assess(Age, Weight, Height, Illness, Diet, Breastfeeding, Sanitation, Assessment) ->
+        print_assessment(Assessment)
+    ;   write('Assessment failed\n')).
+
+% Individual test cases that can be run separately
+test_severe_infant :-
+    write('\nSevere malnutrition case - Young infant\n'),
+    safe_assess(4, 3, 0.6, yes, limited, inadequate, poor, Assessment),
     print_assessment(Assessment).
+
+test_normal_infant :-
+    write('\nNormal case - Young infant\n'),
+    safe_assess(3, 6, 0.6, no, diverse, adequate, good, Assessment),
+    print_assessment(Assessment).
+
+test_moderate_toddler :-
+    write('\nModerate malnutrition case - Toddler\n'),
+    safe_assess(8, 7, 0.7, yes, limited, inadequate, poor, Assessment),
+    print_assessment(Assessment).
+
+test_mild_preschooler :-
+    write('\nMild malnutrition case - Preschooler\n'),
+    safe_assess(36, 12, 0.95, no, limited, adequate, good, Assessment),
+    print_assessment(Assessment).
+
+test_school_age :-
+    write('\nSchool age child case\n'),
+    safe_assess(84, 20, 1.2, yes, limited, adequate, poor, Assessment),
+    print_assessment(Assessment).
+
+% Run all tests:
+% ?- test_cases.
+
+% Run individual scenarios:
+% ?- test_severe_infant.
+% ?- test_normal_infant.
+% ?- test_moderate_toddler.
+% ?- test_mild_preschooler.
+% ?- test_school_age.
 
 
 % Example usage:

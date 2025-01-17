@@ -4,8 +4,8 @@
 
 Hack Reason Project: Developed by: Aman Balam, Pratik Mukesh Manghwani, Nikhil Sesha Sai Kondapalli
 
-# Inspiration
-In India, malnutrition among children remains a significant public health challenge, contributing to malnutrition conditions. With millions of children affected, the consequences can be life-long, affecting education, physical growth, and even cognitive development. The tool was developed to assist in identifying malnutrition risks among children, providing solutions based on symptoms, socioeconomic conditions, and nutritional habits to help improve child health outcomes.
+# Idea
+In India, malnutrition among children remains a significant public health challenge, contributing to increased conditions. With millions of children affected, the consequences can be life-long, affecting education, physical growth, and even cognitive development. The tool was developed to assist in identifying malnutrition risks among children, providing solutions based on symptoms, socioeconomic conditions, and nutritional habits to help improve child health outcomes.
 
 # What it does
 Our system is designed to assess the nutritional health of children, diagnose malnutrition levels, and offer tailored interventions. The program classifies children into different malnutrition categories by analyzing factors like body measurements, symptoms, socio-economic background, diet, and lifestyle. It also provides dietary recommendations and guides parents and caregivers on interventions such as breastfeeding, supplementary feeding, sanitation improvements, and medical consultation based on the child’s specific needs.

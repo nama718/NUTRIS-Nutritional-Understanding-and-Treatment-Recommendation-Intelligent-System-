@@ -2,6 +2,8 @@
 Hack Reason Project
 
 
+
+
 Inspiration
 In India, malnutrition among children remains a significant public health challenge, contributing to malnutrition conditions. With millions of children affected, the consequences can be life-long, affecting education, physical growth, and even cognitive development. The tool was developed to assist in identifying malnutrition risks among children, providing solutions based on symptoms, socioeconomic conditions, and nutritional habits to help improve child health outcomes.
 

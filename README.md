@@ -1,8 +1,8 @@
 # NUTRIS-Nutritional-Understanding-and-Treatment-Recommendation-Intelligent-System
-Hack Reason Project
 
 
 
+Hack Reason Project: Developed by: Aman Balam, Pratik Mukesh Manghwani, Nikhil Sesha Sai Kondapalli
 
 Inspiration
 In India, malnutrition among children remains a significant public health challenge, contributing to malnutrition conditions. With millions of children affected, the consequences can be life-long, affecting education, physical growth, and even cognitive development. The tool was developed to assist in identifying malnutrition risks among children, providing solutions based on symptoms, socioeconomic conditions, and nutritional habits to help improve child health outcomes.

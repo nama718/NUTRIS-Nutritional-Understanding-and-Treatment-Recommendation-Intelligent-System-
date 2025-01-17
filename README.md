@@ -36,5 +36,5 @@ To enhance our tool further, we plan to integrate more localized data on food av
 
 Built With
 Prolog and s(CASP): For logical reasoning and rule-based analysis
-Integrated Data Sources: ICMR
+Integrated Data Sources: ICMR, Official Government Reports
 Nutritional Guidelines: Based on Indian food groups and government health recommendations

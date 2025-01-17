@@ -46,8 +46,11 @@ Designing for impact: Understanding how our tool can influence the well-being of
 
 # What's next
 To enhance our tool further, we plan to integrate more localized data on food availability and nutrition. 
+
 We also want to extend the tool to include adult malnutrition detection and expand the database to cover more regions. 
+
 Feedback from healthcare professionals, social workers, and policymakers will be critical in refining the system and ensuring it provides effective, practical interventions. 
+
 Furthermore, we aim to automate data collection for real-time monitoring and continuous health tracking.
 
 # Built With

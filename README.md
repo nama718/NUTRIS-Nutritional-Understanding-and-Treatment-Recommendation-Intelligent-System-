@@ -56,3 +56,5 @@ Furthermore, we aim to automate data collection for real-time monitoring and con
 # Built With
 s(CASP): For logical reasoning and commonsense-based reasoning
 Integrated Data Sources: ICMR, Official Government Reports
+
+Try it out: Run the file with this link and paste the pl file: https://swish.swi-prolog.org/example/scasp.swinb
